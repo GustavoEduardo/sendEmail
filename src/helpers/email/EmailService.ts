@@ -8,6 +8,7 @@ class EmailService implements IEmailService{
 
     async send({to, message, bcc}: IEmailDTO){
         try {
+            console.log("Enviar para "+to.email)
             
             const transporter = nodemailer.createTransport({
                 host: Config.mailHost,

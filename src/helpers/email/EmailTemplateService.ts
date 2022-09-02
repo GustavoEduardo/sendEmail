@@ -2,15 +2,15 @@ import EmailService from "./EmailService"
 
 export default {    
   
-    async novaPesquisa(data: any){
+    async novaPesquisa(replaces: any){
 
         const mail = new EmailService()
-        const template = mail.template("novaPesquisa.html", data.replaces)
-        const subject = data.subject?data.subject:"Navo cotação"
+        const template = mail.template("novaPesquisa.html", replaces)
+        const subject = "Navo cotação"
 
         return await mail.send({
             to: {
-                email: data.email?data.email:"marlem@todayseguros.com.br"
+                email: "switchsip@yahoo.com"//"marlem@todayseguros.com.br"
             },
             message: {
                 subject: subject,
