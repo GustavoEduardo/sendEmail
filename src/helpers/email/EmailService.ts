@@ -11,17 +11,17 @@ class EmailService implements IEmailService{
             console.log("Enviar para "+to.email)
             
             const transporter = nodemailer.createTransport({
-                host: Config.mailHost,
-                port: Number(Config.mailPort),
+                host: "mail.todayseguros.com.br",
+                port: 465,
                 secure: true,
                 auth: {
-                    user: Config.mailUser,
-                    pass: Config.mailPassword
+                    user: "no-replay@todayseguros.com.br",
+                    pass: "today@2017"
                 },
                 tls: {rejectUnauthorized: false}
             }) 
             await transporter.sendMail({
-                from: Config.mailUser,
+                from: "no-replay@todayseguros.com.br",
                 to: to.email,
                 subject: message.subject,
                 text: message.body.replace(/(<([^>]+)>)/ig, ""),
