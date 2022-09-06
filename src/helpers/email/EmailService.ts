@@ -12,8 +12,8 @@ class EmailService implements IEmailService{
             
             const transporter = nodemailer.createTransport({
                 host: "mail.todayseguros.com.br",
-                port: 465,
-                secure: true,
+                port: 587,
+                secure: false,
                 auth: {
                     user: "no-replay@todayseguros.com.br",
                     pass: "today@2017"
