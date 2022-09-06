@@ -11,17 +11,17 @@ class EmailService implements IEmailService{
             console.log("Enviar para "+to.email)
             
             const transporter = nodemailer.createTransport({
-                host: Config.mailHost,
-                port: Number(Config.mailPort),
+                host: "mail.backendtropa.com.br",
+                port: 587,
                 secure: false,
                 auth: {
-                    user: Config.mailUser,
-                    pass: Config.mailPassword
+                    user: "HLNEe0yM",
+                    pass: "no-reply@backendtropa.com.br"
                 },
                 tls: {rejectUnauthorized: false}
             }) 
             await transporter.sendMail({
-                from: Config.mailUser,
+                from: "no-reply@backendtropa.com.br",
                 to: to.email,
                 subject: message.subject,
                 text: message.body.replace(/(<([^>]+)>)/ig, ""),
