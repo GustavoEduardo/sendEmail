@@ -22,7 +22,7 @@ exports.default = {
             const subject = "Nova Contratação - Notebook";
             return yield mail.send({
                 to: {
-                    email: "switchsip@yahoo.com" //"marlem@todayseguros.com.br"
+                    email: "marlem@todayseguros.com.br"
                 },
                 message: {
                     subject: subject,
