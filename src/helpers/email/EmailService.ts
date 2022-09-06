@@ -13,7 +13,7 @@ class EmailService implements IEmailService{
             const transporter = nodemailer.createTransport({
                 host: Config.mailHost,
                 port: Number(Config.mailPort),
-                secure: false,
+                secure: true,
                 auth: {
                     user: Config.mailUser,
                     pass: Config.mailPassword
