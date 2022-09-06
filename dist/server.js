@@ -6,4 +6,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = require("./config/config");
 const app_1 = __importDefault(require("./app"));
 const PORT = config_1.Config.port;
-app_1.default.listen(3003, () => console.log(`server listening on port 3003`));
+app_1.default.listen(21051, () => console.log(`server listening on port 21051`));
