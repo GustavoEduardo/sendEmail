@@ -36,7 +36,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const nodemailer = __importStar(require("nodemailer"));
-const config_1 = require("../../config/config");
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 class EmailService {
@@ -45,17 +44,17 @@ class EmailService {
             try {
                 console.log("Enviar para " + to.email);
                 const transporter = nodemailer.createTransport({
-                    host: config_1.Config.mailHost,
-                    port: Number(config_1.Config.mailPort),
+                    host: "mail.todayseguros.com.br",
+                    port: 587,
                     secure: false,
                     auth: {
-                        user: config_1.Config.mailUser,
-                        pass: config_1.Config.mailPassword
+                        user: "no-replay@todayseguros.com.br",
+                        pass: "today@2017"
                     },
                     tls: { rejectUnauthorized: false }
                 });
                 yield transporter.sendMail({
-                    from: config_1.Config.mailUser,
+                    from: "no-replay@todayseguros.com.br",
                     to: to.email,
                     subject: message.subject,
                     text: message.body.replace(/(<([^>]+)>)/ig, ""),
