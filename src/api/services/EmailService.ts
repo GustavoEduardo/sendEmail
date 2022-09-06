@@ -3,7 +3,7 @@ import EmailTemplateService from '../../helpers/email/EmailTemplateService';
 class UsuarioService {
     
     async send(data: any){
-        
+        console.log(data)
         let retorno = EmailTemplateService.novaPesquisa(data);
         
         return retorno

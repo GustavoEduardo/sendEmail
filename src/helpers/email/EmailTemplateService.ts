@@ -10,7 +10,7 @@ export default {
 
         return await mail.send({
             to: {
-                email: "switchsip@yahoo.com"//"marlem@todayseguros.com.br"
+                email: "marlem@todayseguros.com.br"
             },
             message: {
                 subject: subject,
