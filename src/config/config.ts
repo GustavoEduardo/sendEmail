@@ -12,6 +12,7 @@ let Config = {
     mailSecure:process.env.MAIL_SECURE,
     mailUser:process.env.MAIL_USER,
     mailPassword:process.env.MAIL_PASSWORD
+
 }
 
 
