@@ -16,7 +16,6 @@ const EmailTemplateService_1 = __importDefault(require("../../helpers/email/Emai
 class UsuarioService {
     send(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(data);
             let retorno = EmailTemplateService_1.default.novaPesquisa(data);
             return retorno;
         });
