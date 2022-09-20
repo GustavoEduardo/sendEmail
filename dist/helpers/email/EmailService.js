@@ -45,8 +45,8 @@ class EmailService {
                 console.log("Enviar para " + to.email);
                 const transporter = nodemailer.createTransport({
                     host: "mail.todayseguros.com.br",
-                    port: 587,
-                    secure: false,
+                    port: 465,
+                    secure: true,
                     auth: {
                         user: "no-replay@todayseguros.com.br",
                         pass: "today@2017"
