@@ -28,7 +28,6 @@ class UsuarioService {
         if(!data.cep || data.cep == ''|| data.cep== "") return false
         if(!data.endereco || data.endereco == ''|| data.endereco== "") return false
         if(!data.numeroCasa || data.numeroCasa == ''|| data.numeroCasa== "") return false
-        if(!data.complemento || data.complemento == ''|| data.complemento== "") return false
         if(!data.cidade || data.cidade == ''|| data.cidade== "") return false
         if(!data.uf || data.uf == ''|| data.uf== "") return false
         if(!data.cpf || data.cpf == ''|| data.cpf== "") return false

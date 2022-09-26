@@ -54,8 +54,6 @@ class UsuarioService {
                 return false;
             if (!data.numeroCasa || data.numeroCasa == '' || data.numeroCasa == "")
                 return false;
-            if (!data.complemento || data.complemento == '' || data.complemento == "")
-                return false;
             if (!data.cidade || data.cidade == '' || data.cidade == "")
                 return false;
             if (!data.uf || data.uf == '' || data.uf == "")
