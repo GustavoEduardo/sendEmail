@@ -3,6 +3,7 @@ import EmailService from "./EmailService"
 export default {    
   
     async novaPesquisa(replaces: any){
+        console.log("Enviar email. Campos Recebidos:")
         console.log(replaces)
         const mail = new EmailService()
         const template = mail.template("novaPesquisa.html", replaces)

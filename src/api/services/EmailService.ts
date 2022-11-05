@@ -14,7 +14,7 @@ class UsuarioService {
     }
 
     async validar(data: any){
-
+        return true
         if(!data.valorProduto || data.valorProduto == ''|| data.valorProduto== "") return false
         if(!data.notobookEmMaos || data.notobookEmMaos == ''|| data.notobookEmMaos== "") return false
         if(!data.modelo || data.modelo == ''|| data.modelo== "") return false

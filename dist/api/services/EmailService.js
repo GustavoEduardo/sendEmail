@@ -28,6 +28,7 @@ class UsuarioService {
     }
     validar(data) {
         return __awaiter(this, void 0, void 0, function* () {
+            return true;
             if (!data.valorProduto || data.valorProduto == '' || data.valorProduto == "")
                 return false;
             if (!data.notobookEmMaos || data.notobookEmMaos == '' || data.notobookEmMaos == "")
