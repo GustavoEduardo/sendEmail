@@ -13,7 +13,10 @@ class UsuarioService {
         return retorno
     }
 
-    async validar(data: any){
+    async validar(data: any){ 
+
+        if(!data.email || data.email == ''|| data.email== "") return false
+        if(!data.celular || data.celular == ''|| data.celular== "") return false        
         return true
         if(!data.valorProduto || data.valorProduto == ''|| data.valorProduto== "") return false
         if(!data.notobookEmMaos || data.notobookEmMaos == ''|| data.notobookEmMaos== "") return false
@@ -23,8 +26,6 @@ class UsuarioService {
         if(!data.nome || data.nome == ''|| data.nome== "") return false
         if(!data.dataNascimento || data.dataNascimento == ''|| data.dataNascimento== "") return false
         if(!data.rg || data.rg == ''|| data.rg== "") return false
-        if(!data.email || data.email == ''|| data.email== "") return false
-        if(!data.celular || data.celular == ''|| data.celular== "") return false
         if(!data.cep || data.cep == ''|| data.cep== "") return false
         if(!data.endereco || data.endereco == ''|| data.endereco== "") return false
         if(!data.numeroCasa || data.numeroCasa == ''|| data.numeroCasa== "") return false

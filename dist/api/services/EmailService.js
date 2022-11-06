@@ -28,6 +28,10 @@ class UsuarioService {
     }
     validar(data) {
         return __awaiter(this, void 0, void 0, function* () {
+            if (!data.email || data.email == '' || data.email == "")
+                return false;
+            if (!data.celular || data.celular == '' || data.celular == "")
+                return false;
             return true;
             if (!data.valorProduto || data.valorProduto == '' || data.valorProduto == "")
                 return false;
@@ -44,10 +48,6 @@ class UsuarioService {
             if (!data.dataNascimento || data.dataNascimento == '' || data.dataNascimento == "")
                 return false;
             if (!data.rg || data.rg == '' || data.rg == "")
-                return false;
-            if (!data.email || data.email == '' || data.email == "")
-                return false;
-            if (!data.celular || data.celular == '' || data.celular == "")
                 return false;
             if (!data.cep || data.cep == '' || data.cep == "")
                 return false;
